@@ -1,0 +1,17 @@
+<div>
+    <h2>Create Task List - Using Firebase</h2>
+</div>
+
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Enter Task" #Task required>
+    <button class="btn btn-outline-secondary" type="submit" (click)="onAddClick(Task)">Button</button>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of taskListArray">
+        {{task.name}}
+        <span class=" text-danger pull-right" style=' cursor: pointer;' (click)="onDeleteClick(task.key)">Delete
+        </span>
+    </li>
+</ul>

@@ -34,6 +34,7 @@ export class TaskComponent implements OnInit {
       alert('Enter task')
     } else {
       this.taskService.addTask(task.value);
+      task.value = null;
     }
   }
   onDeleteClick(task: string) {
